@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4B6CC11F87FA7500A91A37 /* WeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B6CC01F87FA7500A91A37 /* WeatherReport.swift */; };
+		8F4B6CC31F87FBA700A91A37 /* WeatherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B6CC21F87FBA700A91A37 /* WeatherList.swift */; };
+		8F4B6CC51F87FBEE00A91A37 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B6CC41F87FBEE00A91A37 /* Weather.swift */; };
+		8F4B6CC71F87FBFC00A91A37 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B6CC61F87FBFC00A91A37 /* Main.swift */; };
 		8FF34BD91F86424400715D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF34BD81F86424400715D72 /* AppDelegate.swift */; };
-		8FF34BDB1F86424400715D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF34BDA1F86424400715D72 /* ViewController.swift */; };
+		8FF34BDB1F86424400715D72 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF34BDA1F86424400715D72 /* WeatherTableViewController.swift */; };
 		8FF34BDE1F86424400715D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF34BDC1F86424400715D72 /* Main.storyboard */; };
 		8FF34BE01F86424400715D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF34BDF1F86424400715D72 /* Assets.xcassets */; };
 		8FF34BE31F86424400715D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF34BE11F86424400715D72 /* LaunchScreen.storyboard */; };
+		8FFADBF61F8A884300106D9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFADBF51F8A884300106D9C /* Constants.swift */; };
+		8FFADBF91F8A97BB00106D9C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFADBF81F8A97BB00106D9C /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F4B6CC01F87FA7500A91A37 /* WeatherReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReport.swift; sourceTree = "<group>"; };
+		8F4B6CC21F87FBA700A91A37 /* WeatherList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherList.swift; sourceTree = "<group>"; };
+		8F4B6CC41F87FBEE00A91A37 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		8F4B6CC61F87FBFC00A91A37 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		8FF34BD51F86424400715D72 /* Meteo-Fournier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meteo-Fournier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF34BD81F86424400715D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FF34BDA1F86424400715D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FF34BDA1F86424400715D72 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		8FF34BDD1F86424400715D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FF34BDF1F86424400715D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FF34BE21F86424400715D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF34BE41F86424400715D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FFADBF51F8A884300106D9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FFADBF81F8A97BB00106D9C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F4B6CBB1F87E7B400A91A37 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8F4B6CC01F87FA7500A91A37 /* WeatherReport.swift */,
+				8F4B6CC21F87FBA700A91A37 /* WeatherList.swift */,
+				8F4B6CC41F87FBEE00A91A37 /* Weather.swift */,
+				8F4B6CC61F87FBFC00A91A37 /* Main.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8F4B6CBC1F87E7CD00A91A37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FF34BDA1F86424400715D72 /* WeatherTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8FF34BCC1F86424400715D72 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +86,24 @@
 			isa = PBXGroup;
 			children = (
 				8FF34BD81F86424400715D72 /* AppDelegate.swift */,
-				8FF34BDA1F86424400715D72 /* ViewController.swift */,
+				8F4B6CBC1F87E7CD00A91A37 /* Controller */,
+				8F4B6CBB1F87E7B400A91A37 /* Entities */,
+				8FFADBF71F8A884700106D9C /* Constantes */,
 				8FF34BDC1F86424400715D72 /* Main.storyboard */,
 				8FF34BDF1F86424400715D72 /* Assets.xcassets */,
 				8FF34BE11F86424400715D72 /* LaunchScreen.storyboard */,
 				8FF34BE41F86424400715D72 /* Info.plist */,
 			);
 			path = "Meteo-Fournier";
+			sourceTree = "<group>";
+		};
+		8FFADBF71F8A884700106D9C /* Constantes */ = {
+			isa = PBXGroup;
+			children = (
+				8FFADBF51F8A884300106D9C /* Constants.swift */,
+				8FFADBF81F8A97BB00106D9C /* Utilities.swift */,
+			);
+			path = Constantes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +139,11 @@
 					8FF34BD41F86424400715D72 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -136,8 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF34BDB1F86424400715D72 /* ViewController.swift in Sources */,
+				8FF34BDB1F86424400715D72 /* WeatherTableViewController.swift in Sources */,
+				8F4B6CC31F87FBA700A91A37 /* WeatherList.swift in Sources */,
 				8FF34BD91F86424400715D72 /* AppDelegate.swift in Sources */,
+				8F4B6CC11F87FA7500A91A37 /* WeatherReport.swift in Sources */,
+				8F4B6CC51F87FBEE00A91A37 /* Weather.swift in Sources */,
+				8FFADBF61F8A884300106D9C /* Constants.swift in Sources */,
+				8FFADBF91F8A97BB00106D9C /* Utilities.swift in Sources */,
+				8F4B6CC71F87FBFC00A91A37 /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +328,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XL6X7NGQBC;
 				INFOPLIST_FILE = "Meteo-Fournier/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pierre.Meteo-Fournier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,12 +344,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XL6X7NGQBC;
 				INFOPLIST_FILE = "Meteo-Fournier/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pierre.Meteo-Fournier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
