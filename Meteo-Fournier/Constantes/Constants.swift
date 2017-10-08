@@ -26,7 +26,7 @@ struct Constants {
     static let NoInternetMessage = "Veuiller activer votre connexion internet et réessayer"
     
     static let BadStatusTitle = "Erreur"
-    static let BadStatusMessage = "Un problème est survenue, veuillez vérifier vos identifiants de connexion."
+    static let BadStatusMessage = "Un problème est survenu, veuillez vérifier vos identifiants de connexion."
     
     
     

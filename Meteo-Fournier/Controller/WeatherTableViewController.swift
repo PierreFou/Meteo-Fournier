@@ -38,7 +38,7 @@ class WeatherTableViewController: UITableViewController {
         cell.textLabel?.text = getFormattedDate(timeIntervalSince1970: weather.dt, format: dateFormat)
     
         // Put the temperature in the subtitle
-        cell.detailTextLabel?.text = "\(weather.main.temp)°"
+        cell.detailTextLabel?.text = "\(weather.main.temp)°, \(weather.weather[0].description)"
         
         // Put the weather icon in the image view
         cell.indentationLevel = 5
@@ -65,7 +65,11 @@ class WeatherTableViewController: UITableViewController {
                     
                     guard let data = data else { return }
                     
-                    self.weatherIcons[iconId] = UIImage(data: data)!
+                    if let weatherIcon = UIImage(data: data){
+                        self.weatherIcons[iconId] = weatherIcon
+                    } else {
+                        self.weatherIcons[iconId] = UIImage(named: "unavailable.png")
+                    }
                     
                     DispatchQueue.main.async {
                         self.weatherTableView.reloadData()
@@ -83,18 +87,29 @@ class WeatherTableViewController: UITableViewController {
         guard let url = URL(string: jsonUrlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
-            //also perhaps check response status 200 OK
-            
-            guard let data = data else { return }
             
             do {
                 
-                self.meteo  = try JSONDecoder().decode(WeatherReport.self, from: data).list
-                
-                DispatchQueue.main.async {
-                    self.weatherTableView.reloadData()
+                if err != nil {
+                    
+                    displayAlert(controller: self, title: Constants.NoInternetTitle, message: Constants.NoInternetMessage, button: Constants.Ok)
+                    
+                } else if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode != 200 {
+                        
+                        displayAlert(controller: self, title: Constants.BadStatusTitle, message: Constants.BadStatusMessage, button: Constants.Ok)
+                        
+                    } else {
+                        
+                        guard let data = data else { return }
+                        
+                        self.meteo = try JSONDecoder().decode(WeatherReport.self, from: data).list
+                        
+                        DispatchQueue.main.async {
+                            self.weatherTableView.reloadData()
+                        }
+                    }
                 }
-                
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
             }
